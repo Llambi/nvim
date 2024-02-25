@@ -3,11 +3,13 @@ return {
   config = function()
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
     local null_ls = require("null-ls")
-
     null_ls.setup({
       sources = {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.diagnostics.luacheck,
+
+        null_ls.builtins.formatting.rubocop,
+        null_ls.builtins.diagnostics.rubocop,
       },
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then

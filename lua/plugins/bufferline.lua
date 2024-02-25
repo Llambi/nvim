@@ -7,8 +7,8 @@ return {
     { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>",          desc = "Delete other buffers" },
     { "<leader>br", "<Cmd>BufferLineCloseRight<CR>",           desc = "Delete buffers to the right" },
     { "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>",            desc = "Delete buffers to the left" },
-    { "<B-h>",      "<cmd>BufferLineCyclePrev<cr>",            desc = "Prev buffer" },
-    { "<B-l>",      "<cmd>BufferLineCycleNext<cr>",            desc = "Next buffer" },
+    { "<leader>bp", "<cmd>BufferLineCyclePrev<cr>",            desc = "Prev buffer" },
+    { "<leader>bn", "<cmd>BufferLineCycleNext<cr>",            desc = "Next buffer" },
   },
   config = function(_, opts)
     require("bufferline").setup(opts)
